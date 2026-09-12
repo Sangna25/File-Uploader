@@ -9,7 +9,7 @@ export function FolderComponent({folder, onRename, onDelete}){
     if (!newName) return;
 
     const response = await fetch(
-      `http://localhost:8080/mydrive/rename/folder/${folder.id}`,
+      `${import.meta.env.VITE_API_URL}/mydrive/rename/folder/${folder.id}`,
       {
         method: "PUT",
         credentials: "include",
@@ -27,7 +27,7 @@ export function FolderComponent({folder, onRename, onDelete}){
   }
    async function handleDelete() {
     const response = await fetch(
-      `http://localhost:8080/mydrive/delete/folder/${folder.id}`,
+      `${import.meta.env.VITE_API_URL}/mydrive/delete/folder/${folder.id}`,
       {
         method: "DELETE",
         credentials: "include",

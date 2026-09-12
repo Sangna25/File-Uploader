@@ -9,6 +9,7 @@ export function AuthProvider({children}){
     const [ user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
     const login = (userData) =>{
+       
         setUser(userData)
     }
 

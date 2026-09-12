@@ -24,11 +24,16 @@ initializePassport(passport)
 
 app.use(express.json());
 app.use(express.urlencoded({extended :false}));
-
+app.set("trust proxy", 1);
 app.use(session({
     secret : process.env.SESSION_SECRET,
     resave :false,
-    saveUninitialized:false
+    saveUninitialized:false,
+     cookie: {
+    httpOnly: true,
+    secure: true,
+    sameSite: "none",
+  },
 }))
 
 

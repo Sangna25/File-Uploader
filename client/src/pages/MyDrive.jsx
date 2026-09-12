@@ -14,7 +14,7 @@ const [selectedFile, setSelectedFile] = useState(null); // just like fromEntries
 
     useEffect(()=>{
         async function fetchDrive() {
-            const response = await fetch("http://localhost:8080/mydrive", {
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/mydrive`, {
                 credentials:"include"
             })
             if (!response.ok) return;
@@ -30,7 +30,7 @@ const [selectedFile, setSelectedFile] = useState(null); // just like fromEntries
     async function  handleFolderUpload(event) {
         event.preventDefault()
         try {
-            const response = await fetch("http://localhost:8080/mydrive/folder", {
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/mydrive/folder`, {
                 credentials:"include",
                 method: "POST",
                 headers: {
@@ -62,7 +62,7 @@ const [selectedFile, setSelectedFile] = useState(null); // just like fromEntries
             formData.append("file", selectedFile);
             // no content type : broswer auto adds multipart/form-data
 
-            const response = await fetch("http://localhost:8080/mydrive/file", {
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/mydrive/file`, {
                 method: "POST",
                 credentials: "include",
                 body: formData,

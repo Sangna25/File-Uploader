@@ -14,7 +14,7 @@ export function AuthProvider({children}){
 
    const logout = async () => {
   try {
-    await fetch("http://localhost:8080/auth/logout", {
+    await fetch("${import.meta.env.VITE_API_URL}/auth/logout", {
       method: "DELETE",
       credentials: "include",
     });
@@ -28,7 +28,7 @@ export function AuthProvider({children}){
     useEffect(()=>{
         async function fetchCurrentUser(){
             try {
-                const response = await fetch("http://localhost:8080/auth/me",{
+                const response = await fetch("${import.meta.env.VITE_API_URL}/auth/me",{
                     credentials:"include"
                 });
 

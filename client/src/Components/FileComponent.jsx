@@ -1,12 +1,12 @@
 export function FileComponent ({file, onRename, onDelete}){
 function handleDownload() {
-window.location.href = `http://localhost:8080/mydrive/download/file/${file.id}`;
+window.location.href = `${import.meta.env.VITE_API_URL}/mydrive/download/file/${file.id}`;
 } 
 async function handleRename() {
      const newName = prompt("Enter new file name:");
   if (!newName) return;
    const response = await fetch(
-  `http://localhost:8080/mydrive/rename/file/${file.id}`,
+  `${import.meta.env.VITE_API_URL}/mydrive/rename/file/${file.id}`,
   {
     method: "PUT",
     credentials: "include",
@@ -29,7 +29,7 @@ async function handleRename() {
     
 async function handleDelete() {
     const response = await fetch(
-    `http://localhost:8080/mydrive/delete/file/${file.id}`,
+    `${import.meta.env.VITE_API_URL}/mydrive/delete/file/${file.id}`,
     {
       method: "DELETE",
       credentials: "include",
@@ -45,7 +45,7 @@ async function handleDelete() {
     return(
         <div className="file-comp-container">
             <div className="file-info">
-    <img src="/assets/file.png" alt="file-image" className="file-icon" />
+    <img src="assets/file.png" alt="file-image" className="file-icon" />
                 <h3>{file.name}</h3>
                 <p> {(file.size / 1024).toFixed(1)} KB •{" "}
                 </p>

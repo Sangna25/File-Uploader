@@ -37,7 +37,7 @@ const [selectedFile, setSelectedFile] = useState(null);
     formData.append("file", selectedFile);
     formData.append("folderId", id);
 
-    const response = await fetch("http://localhost:8080/mydrive/file", {
+    const response = await fetch(`${import.meta.env.VITE_API_URL}/mydrive/file`, {
       method: "POST",
       credentials: "include",
       body: formData,

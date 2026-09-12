@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react"
 import { Outlet, useLocation } from "react-router-dom"
 
-import { Footer } from "./components/Footer"
+import { Footer } from "./Components/Footer"
 import { NavBar } from "./Components/NavBar"
 import { useAuth } from "./Context/AuthContext"
 

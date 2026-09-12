@@ -1056,3 +1056,199 @@ body {
   transform: translateY(-2px);
   box-shadow: 0 12px 30px rgba(20, 100, 200, 0.45);
 }
+
+
+
+/* ========== RESPONSIVE: TABLET (≤900px) ========== */
+@media (max-width: 900px) {
+  .home-container h1 {
+    font-size: 2.2rem;
+  }
+
+  .register-container,
+  .login-container {
+    padding: 48px 32px;
+  }
+
+  .folder-container {
+    width: calc(50% - 10px);
+  }
+
+  .file-container {
+    width: 100%;
+  }
+}
+
+/* ========== RESPONSIVE: MOBILE (≤600px) ========== */
+@media (max-width: 600px) {
+
+  /* Navbar */
+  .navbar-container {
+    flex-wrap: wrap;
+    padding: 14px 18px;
+    gap: 10px;
+  }
+
+  .navbar-container h1 {
+    font-size: 1.3rem;
+    padding-left: 40px;
+  }
+
+  .navbar-container h1::before {
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
+  }
+
+  .navigation {
+    order: 3;
+    width: 100%;
+  }
+
+  .nav-link {
+    font-size: 0.95rem;
+  }
+
+  .profile-section {
+    margin-left: auto;
+    gap: 8px;
+  }
+
+  .profile-info span {
+    display: none;
+  }
+
+  .profile-info {
+    padding: 4px;
+  }
+
+  .profile-pic {
+    width: 30px;
+    height: 30px;
+  }
+
+  .profile-section button {
+    padding: 8px 14px;
+    font-size: 0.85rem;
+  }
+
+  .profile-section button span,
+  .profile-section button {
+    white-space: nowrap;
+  }
+
+  /* Home */
+  .home-container {
+    padding: 48px 16px 40px;
+  }
+
+  .home-container h1 {
+    font-size: 1.8rem;
+  }
+
+  .home-container > p {
+    font-size: 1rem;
+    margin-bottom: 36px;
+  }
+
+  .home-info-container {
+    width: 100%;
+  }
+
+  .main-container {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .main-container button {
+    width: 100%;
+  }
+
+  /* Register / Login */
+  .register-container,
+  .login-container {
+    width: 92%;
+    padding: 36px 22px;
+    margin: 32px auto;
+  }
+
+  .register-container h1,
+  .login-container h1 {
+    font-size: 1.8rem;
+  }
+
+  .form-row label {
+    font-size: 1rem;
+  }
+
+  .form-row input {
+    font-size: 1rem;
+  }
+
+  /* MyDrive */
+  .myDrive-container,
+  .folder-page-container {
+    padding: 24px 16px 60px;
+  }
+
+  .drive-header h2 {
+    font-size: 1.6rem;
+  }
+
+  .drive-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .drive-header > button,
+  .drive-header > button + button {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .folder-form,
+  .file-form,
+  .folder-page-container form {
+    flex-wrap: wrap;
+    padding: 14px 16px;
+  }
+
+  .folder-form input,
+  .file-form input,
+  .folder-page-container form input {
+    width: 100%;
+  }
+
+  .folder-section h1,
+  .file-section h1 {
+    font-size: 1.3rem;
+  }
+
+  .folder-container,
+  .file-container {
+    width: 100%;
+  }
+
+  .file-comp-container {
+    padding: 16px 18px;
+  }
+
+  .file-icon,
+  .folder-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .file-info h3 {
+    font-size: 0.95rem;
+  }
+
+  /* Error page */
+  .error-container h1 {
+    font-size: 4rem;
+  }
+
+  .error-container h2 {
+    font-size: 1.3rem;
+  }
+}
